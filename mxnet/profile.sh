@@ -64,3 +64,7 @@ do
     python3 profile_mxnet.py --symbol-file=$MODEL_PATH/mobilenetv2_1.0-quantized-5batches-naive-symbol.json --param-file=$MODEL_PATH/mobilenetv2_1.0-quantized-0000.params --image-shape=3,224,224  --num-inference-batches=2000  |& tee -a perf.txt
     python3 profile_tvm.py --symbol-file=$MODEL_PATH/mobilenetv2_1.0-quantized-5batches-naive-symbol.json --param-file=$MODEL_PATH/mobilenetv2_1.0-quantized-0000.params --image-shape=3,224,224  --num-inference-batches=2000  |& tee -a perf.txt
 done
+
+
+
+python3 profile_bert.py --symbol-file=../models/model/model_bert_squad_quantized-symbol.json --param-file=../models/model/model_bert_squad_quantized-0000.params  --image-shape=3,224,224  --num-inference-batches=2000

@@ -22,6 +22,8 @@ python3 compile.py --symbol-file=$MODEL_PATH/inceptionv3-quantized-5batches-naiv
 python3 compile.py --symbol-file=$MODEL_PATH/resnet101_v1-quantized-5batches-naive-symbol.json --param-file=$MODEL_PATH/resnet101_v1-quantized-0000.params --image-shape=3,224,224 --tune=no
 python3 compile.py --symbol-file=$MODEL_PATH/imagenet1k-resnet-152-quantized-5batches-naive-symbol.json --param-file=$MODEL_PATH/imagenet1k-resnet-152-quantized-0000.params --image-shape=3,224,224 --tune=no
 
+# BERT
+python3 compile_bert.py --symbol-file=$MODEL_PATH/model_bert_squad_quantized-symbol.json --param-file=$MODEL_PATH/model_bert_squad_quantized-0000.params  --image-shape=3,224,224 --tune=no
 
 # FP32 models
 python3 compile.py --symbol-file=$MODEL_PATH/resnet18_v1-symbol.json --param-file=$MODEL_PATH/resnet18_v1-0000.params --image-shape=3,224,224 --tune=no
