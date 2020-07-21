@@ -37,7 +37,7 @@ import statistics
 import pathlib
 
 
-target = 'llvm -mcpu=core-avx2'
+target = 'llvm -mcpu=cascadelake'
 def tune_kernels(tasks,
                  measure_option,
                  tuner='gridsearch',
@@ -137,7 +137,6 @@ def compile_via_tvm(sym, arg_params, aux_params, symbol_file, data_shape, tune):
                                             shape=input_dict,
                                             arg_params=arg_params,
                                             aux_params=aux_params)
-    print(mod)
 
     model_name = symbol_file.split('/')[-1].replace('.json','')
     log_dir = os.getcwd() + "/tuned_logs_c5"

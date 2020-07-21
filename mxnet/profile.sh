@@ -67,4 +67,5 @@ done
 
 
 
-python3 profile_bert.py --symbol-file=../models/model/model_bert_squad_quantized-symbol.json --param-file=../models/model/model_bert_squad_quantized-0000.params  --image-shape=3,224,224  --num-inference-batches=2000
+python3 profile_bert.py --symbol-file=./models/model/model_bert_squad_tensor-wise_quantized-symbol.json --param-file=./models/model/model_bert_squad_tensor-wise_quantized-0000.params  --image-shape=3,224,224  --num-inference-batches=2000
+python3 profile_bert.py --symbol-file=./models/model/model_bert_squad_channel-wise_quantized-symbol.json --param-file=./models/model/model_bert_squad_channel-wise_quantized-0000.params  --image-shape=3,224,224  --num-inference-batches=2000
